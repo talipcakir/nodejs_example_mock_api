@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Apple iPhone 14 Pro Max 128Gb Deep Purple",
+    "price": 1399.00,
+    "description": "Enhanced capabilities thanks to an enlarged display of 6.7 inches...",
+    "category": "Smartphones",
+    "image": "/photo/Iphone 14 pro 1.png"
+  },
+  {
+    "id": 2,
+    "title": "Apple AirPods Max",
+    "price": 549.00,
+    "description": "Computational audio. Listen, it's powerful...",
+    "category": "Audio",
+    "image": "/photo/hero__gnfk5g59t0qe_xlarge_2x 1.png"
+  },
+  {
+    "id": 3,
+    "title": "Playstation 5",
+    "price": 499.00,
+    "description": "Incredibly powerful CPUs, GPUs, and an SSD...",
+    "category": "Gaming",
+    "image": "/photo/PlayStation.png"
+  },
+  {
+    "id": 4,
+    "title": "Macbook Air M2",
+    "price": 999.00,
+    "description": "The new 15‑inch MacBook Air makes room for more...",
+    "category": "Computers",
+    "image": "/photo/Screen.png"
+  },
+  {
+    "id": 5,
+    "title": "iPad 10.2-inch",
+    "price": 329.00,
+    "description": "iPad combines a magnificent 10.2-inch Retina display...",
+    "category": "Computers",
+    "image": "/photo/Group 1.png"
+  },
+  {
+    "id": 6,
+    "title": "Ipad Pro 11-inch",
+    "price": 799.00,
+    "description": "Incredible performance, multitasking and ease of use...",
+    "category": "Computers",
+    "image": "/photo/image 64 (1).png"
+  },
+  {
+    "id": 7,
+    "title": "Samsung Galaxy Z Fold 5",
+    "price": 1799.00,
+    "description": "Meet the phone with a big screen like a mobile movie theater...",
+    "category": "Smartphones",
+    "image": "/photo/image 41.png"
+  },
+  {
+    "id": 8,
+    "title": "Macbook Pro 14-inch",
+    "price": 1599.00,
+    "description": "The most powerful Macbook Pro ever...",
+    "category": "Computers",
+    "image": "/photo/Macbook 1.png"
+  },
+  {
+    "id": 9,
+    "title": "Apple Watch Series 8",
+    "price": 399.00,
+    "description": "A healthy leap ahead. With advanced health sensors...",
+    "category": "Watches",
+    "image": "/photo/Smart Watches.png"
+  },
+  {
+    "id": 10,
+    "title": "Sony WH-1000XM5 Headphones",
+    "price": 349.00,
+    "description": "Our best ever noise cancelling headphones...",
+    "category": "Audio",
+    "image": "/photo/Headphones.png"
+  },
+  {
+    "id": 11,
+    "title": "Canon EOS R6 Mark II",
+    "price": 2499.00,
+    "description": "A full-frame mirrorless camera for hybrid shooters...",
+    "category": "Cameras",
+    "image": "/photo/Cameras.png"
+  },
+  {
+    "id": 12,
+    "title": "Xbox Series X",
+    "price": 499.00,
+    "description": "The fastest, most powerful Xbox ever...",
+    "category": "Gaming",
+    "image": "/photo/Gaming.png"
+  }
+]

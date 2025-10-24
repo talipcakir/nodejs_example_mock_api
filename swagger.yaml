@@ -1,0 +1,139 @@
+openapi: 3.0.0
+info:
+  title: NodeJS Example API
+  version: 1.0.0
+  description: Eğitim amaçlı, ürünleri ve siparişleri yöneten Node.js/Express Mock Backend API'si.
+servers:
+  - url: http://localhost:4000
+    description: Mock Backend Sunucusu
+
+tags:
+  - name: Products
+    description: Ürünler ile ilgili işlemler
+  - name: Orders
+    description: Siparişler ile ilgili işlemler
+
+paths:
+  /products:
+    get:
+      tags:
+        - Products
+      summary: Tüm ürünleri listeler veya filtrelenmiş/limitli ürünleri getirir.
+      parameters:
+        - in: query
+          name: _limit
+          schema:
+            type: integer
+          description: "Döndürülecek maksimum ürün sayısı (Örn: 8)"
+        - in: query
+          name: category
+          schema:
+            type: string
+          description: "Kategoriye göre filtreleme (Örn: Computers)"
+      responses:
+        '200':
+          description: Başarılı yanıt. Ürün listesi döndürülür.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+        '500':
+          description: Sunucu hatası
+  
+  /products/{id}:
+    get:
+      tags:
+        - Products
+      summary: Belirtilen ID'ye sahip tek bir ürünü getirir.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: Ürün ID'si
+      responses:
+        '200':
+          description: Başarılı yanıt. Ürün objesi döndürülür.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '404':
+          description: Ürün bulunamadı.
+
+  /order:
+    post:
+      tags:
+        - Orders
+      summary: Yeni bir sipariş oluşturur.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      productId:
+                        type: integer
+                      quantity:
+                        type: integer
+                customerName:
+                  type: string
+                totalAmount:
+                  type: number
+                  format: float
+              example:
+                items:
+                  - productId: 1
+                    quantity: 1
+                customerName: "Can Yılmaz"
+                totalAmount: 1399.00
+      responses:
+        '201':
+          description: Sipariş başarıyla oluşturuldu.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  orderId:
+                    type: integer
+        '400':
+          description: İstek gövdesi (body) boş.
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Ürün ID
+        title:
+          type: string
+          description: Ürün Başlığı
+        price:
+          type: number
+          format: float
+          description: Ürün Fiyatı
+        description:
+          type: string
+          description: Ürün Açıklaması
+        category:
+          type: string
+          description: Ürün Kategorisi
+        image:
+          type: string
+          description: Ürün Resim Yolu
