@@ -106,6 +106,10 @@ app.post('/order', (req, res) => {
     });
 });
 
+app.get('/category', (req, res) => {
+    const categories = [...new Set(products.map(p => p.category))];
+    res.json(categories);
+});
 
 // Sunucuyu başlat
 app.listen(port, () => {
