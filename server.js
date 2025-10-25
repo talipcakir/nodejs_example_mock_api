@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
 
+const db = require('./veritabani');
+
 // Swagger/OpenAPI için gerekli paketler
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs'); 
