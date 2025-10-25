@@ -106,6 +106,8 @@ app.post('/order', (req, res) => {
     });
 });
 
+// test
+
 app.get('/category', (req, res) => {
     const categories = [...new Set(products.map(p => p.category))];
     res.json(categories);
